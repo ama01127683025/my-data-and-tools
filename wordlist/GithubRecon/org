@@ -1,0 +1,23 @@
+org:example AND ("@gmail.com" OR "@yahoo.com" OR "@hotmail.com")
+org:example AND ("AWS_SECRET_ACCESS_KEY" OR "AWS_ACCESS_KEY_ID" OR "access_token" OR "Authorization: Bearer" OR "authorizationToken" OR "auth_token" OR "api_key" OR "secret" OR "PRIVATE_KEY" OR "api_key" OR "x-api-key" OR "Token" OR "secret" OR "secure" OR "secret_token" OR "SECRET_KEY" OR "client_secret" OR "password" OR "passwd" OR "pwd" OR "pass" OR "BEGIN RSA PRIVATE KEY" OR "credentials" OR "aws_secret_key" OR "aws_token" OR "GCP_SECRET" OR "gcloud_api_key" OR "firebase_url" OR "shodan_api_key")
+org:example "api_key" language:json
+org:example "secret" language:yaml
+org:example "password" language:env
+org:example filename:.env
+org:example filename:.npmrc
+org:example filename:.dockercfg
+org:example filename:.bash_history
+org:example filename:config.js
+org:example filename:settings.py
+org:example filename:application.properties
+org:example filename:credentials.json
+org:example filename:firebase.json
+org:example filename:.github/workflows
+org:example "secrets." language:yaml
+org:example AND ("GITHUB_TOKEN" OR "CI_SECRET" OR "secrets.")
+org:example AND ("username" "password" OR "username" OR "password" OR "db_password" OR "MYSQL_PASSWORD" OR "db_pass" OR "mongodb+srv://" OR "postgres://" OR "mysql://" OR "DATABASE_URL" OR "POSTGRES_PASSWORD" OR "mongo_uri" OR "mongodb_password")
+org:example AND ("admin" OR "dashboard" OR "control panel" OR "admin_url" OR "site_url")
+org:example "admin" in:url
+org:example "admin" in:path
+org:example "dashboard" in:url
+org:example "login" filename:config.js
